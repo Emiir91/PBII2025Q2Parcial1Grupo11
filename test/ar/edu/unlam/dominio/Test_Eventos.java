@@ -123,11 +123,10 @@ public class Test_Eventos {
 		
 		Casamiento casamientoNueva = new Casamiento(nombre, fecha, lugar, false);
 		Boolean seAgrego = sistema.agregarEvento(casamientoNueva);
-		Integer idInventado = 5;
+		Integer idInventado = 1;
 
 		
 		Persona persona1 = new Persona(912, "Jose", 20);
-		Persona persona2 = new Persona(1, "Julieta", 74);
 		
 		Boolean seAgregoParticipante = sistema.agregarParticipante(idInventado, persona1);
 		Boolean seAgregoParticipante2 = sistema.agregarParticipante(idInventado, persona2);
