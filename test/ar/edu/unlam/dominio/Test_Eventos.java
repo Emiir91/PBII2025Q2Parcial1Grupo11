@@ -127,6 +127,7 @@ public class Test_Eventos {
 
 		
 		Persona persona1 = new Persona(912, "Jose", 20);
+		Persona persona2 = new Persona(5, "Julieta", 74);
 		
 		Boolean seAgregoParticipante = sistema.agregarParticipante(idInventado, persona1);
 		Boolean seAgregoParticipante2 = sistema.agregarParticipante(idInventado, persona2);
