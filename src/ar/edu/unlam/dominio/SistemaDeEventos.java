@@ -176,4 +176,14 @@ public class SistemaDeEventos {
 		return false;
 	}
 
+	public Boolean eliminarEventoPorId(Integer id) {
+	    for (Evento evento : eventos) {
+	        if (evento.getId().equals(id)) {
+	            eventos.remove(evento);
+	            return true;
+	        }
+	    }
+	    return false;
+	}
+
 }
