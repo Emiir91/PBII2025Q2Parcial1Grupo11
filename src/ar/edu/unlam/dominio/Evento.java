@@ -1,6 +1,8 @@
 package ar.edu.unlam.dominio;
 
 import java.time.LocalDate;
+import java.util.HashSet;
+
 
 public abstract class Evento {
 	
@@ -9,12 +11,14 @@ public abstract class Evento {
 	private String nombre;
 	private LocalDate fecha;
 	private String lugar;
+	private HashSet<Persona> participantes;
 	
 	public Evento(String nombre, LocalDate fecha, String lugar) {
 		this.id = ++idIncremento;
 		this.nombre = nombre;
 		this.fecha = fecha;
 		this.lugar = lugar;
+		this.participantes = new HashSet<>();
 	}
 
 	public Integer getId() {
@@ -49,6 +53,9 @@ public abstract class Evento {
 		this.lugar = lugar;
 	}
 	
+	public HashSet<Persona> getParticipantes() {
+		return participantes;
+	}
 	
-	
+	public abstract Boolean agregarParticipantes(Persona participante);
 }

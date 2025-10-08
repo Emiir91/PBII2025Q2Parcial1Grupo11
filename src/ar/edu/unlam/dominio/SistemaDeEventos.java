@@ -2,6 +2,7 @@ package ar.edu.unlam.dominio;
 
 import java.util.ArrayList;
 
+
 public class SistemaDeEventos {
 	
 	private ArrayList<Evento> eventos;
@@ -27,6 +28,30 @@ public class SistemaDeEventos {
 		}
 		
 		return eventos.add(eventoNuevo);
+	}
+
+	public Boolean agregarParticipante(Integer id, Persona participante) {
+
+		for (Evento evento : eventos) {
+			if (evento.getId().equals(id)) {
+
+				if (evento instanceof Casamiento) {
+					return evento.agregarParticipantes(participante);
+				}
+
+				if (evento instanceof Conferencia) {
+					return evento.agregarParticipantes(participante);
+				}
+
+				if (evento instanceof Recital) {
+					return evento.agregarParticipantes(participante);
+				}
+
+			}
+
+		}
+
+		return false;
 	}
 
 	
